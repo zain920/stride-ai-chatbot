@@ -22,7 +22,7 @@ os.makedirs(CHAT_HISTORY_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Groq API Configuration
-GROQ_API_KEY = "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"
+GROQ_API_KEY = os.environ.get('GROQ_API_KEY', '')
 API_URL = "https://api.groq.com/openai/v1/chat/completions"
 VISION_URL = "https://api.groq.com/openai/v1/chat/completions"
 
